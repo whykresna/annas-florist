@@ -12,7 +12,7 @@
                 <!-- Contact Thumbnail -->
                 <div class="col-12 col-md-6">
                     <div class="contact--thumbnail">
-                        <img src="img/bg-img/25.jpg" alt="">
+                        <img src="{{ asset('img/bg-img/25.jpg') }}" alt="">
                     </div>
                 </div>
 
@@ -20,14 +20,13 @@
                     <!-- Section Heading -->
                     <div class="section-heading">
                         <h2>CONTACT US</h2>
-                        <p>We are improving our services to serve you better.</p>
+                        <p>Hubungi kami dengan informasi kontak di bawah ini.</p>
                     </div>
                     <!-- Contact Information -->
                     <div class="contact-information">
                         <p><span>Phone:</span> +62 896 8379 2377</p>
-                        <p><span>Email:</span> info.deercreative@gmail.com</p>
-                        <p><span>Open hours:</span> Mon - Sun: 8 AM to 9 PM</p>
-                        <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p>
+                        <p><span>Email:</span> annasfloristjember@gmail.com</p>
+                        <p><span>Open hours:</span> Mon - Sun: 9 AM to 5 PM</p>
                     </div>
                 </div>
             </div>
@@ -43,7 +42,7 @@
                     <!-- Section Heading -->
                     <div class="section-heading">
                         <h2>GET IN TOUCH</h2>
-                        <p>Send us a message, we will call back later</p>
+                        <p>Kami menerima segala bentuk kritik dan saran.</p>
                     </div>
                     <!-- Contact Form Area -->
                     <div class="contact-form-area mb-100">

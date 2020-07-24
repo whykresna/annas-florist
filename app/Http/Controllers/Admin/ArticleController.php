@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Article;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\File;
 
 class ArticleController extends Controller
 {
@@ -87,7 +85,9 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
+        $article = Article::findOrFail($id);
 
+        return view('admin.article.edit', compact('article'));
     }
 
     /**
@@ -99,7 +99,19 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title'     => 'required|string|max:30',
+            'detail'    => 'required'
+        ]);
+
+        Article::whereId($id)->update([
+            'title'     => $request->title,
+            'slug'      => strtolower($request->title),
+            'excerpt'   => Str::words(strip_tags($request->detail), 10),
+            'detail'    => $request->detail,
+        ]);
+
+        return redirect()->route('article.index')->with('success', 'Article is successfully updated');
     }
 
     /**

@@ -16,24 +16,17 @@ Auth::routes();
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/dashboard', 'HomeController@index')->name('admin.dashboard');
     Route::resource('product', 'Admin\ProductController')->except('show');
+    Route::resource('portfolio', 'Admin\PortfolioController')->except('show');
     Route::resource('article', 'Admin\ArticleController')->except('show');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/', 'FrontController@showHome');
 
 Route::get('/shop', 'FrontController@showProduct');
 
 Route::get('/shop/{slug}', 'FrontController@showProductDetail');
 
-Route::get('/portofolio', function () {
-    return view('portofolio');
-});
+Route::get('/portfolio', 'FrontController@showPortfolio');
 
 Route::get('/blog', 'FrontController@showArticle');
 

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Product;
+use App\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class ProductController extends Controller
+class PortfolioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +16,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('id', 'ASC')->paginate(10);
+        $portfolios = Portfolio::orderBy('id', 'ASC')->paginate(10);
 
-        if (empty($products)) {
-            return view('admin.product.index');
+        if (empty($portfolios)) {
+            return view('admin.portfolio.index');
         } else {
-            return view('admin.product.index', compact('products'));
+            return view('admin.portfolio.index', compact('portfolios'));
         }
     }
 
@@ -32,7 +32,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.product.create');
+        return view('admin.portfolio.create');
     }
 
     /**
@@ -45,29 +45,23 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             'name'          => 'required|string|max:30',
-            'description'   => 'max:300',
             'image'         => 'required|image|mimes:png,jpeg,jpg',
-            'price'         => 'required|integer',
-            'weight'        => 'required|integer',
+            'size'          => 'required',
         ]);
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $image = time() . Str::slug($request->name) . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/products', $image);
+            $file->storeAs('public/portfolios', $image);
         }
 
-        Product::create([
+        Portfolio::create([
             'name'          => $request->name,
-            'slug'          => strtolower($request->name),
-            'description'   => $request->description,
             'image'         => $image,
-            'price'         => $request->price,
-            'weight'        => $request->weight,
-            'status'        => $request->status,
+            'size'          => $request->size,
         ]);
 
-        return redirect()->route('product.index')->with('success', 'Product is successfully saved');
+        return redirect()->route('portfolio.index')->with('success', 'Portfolio is successfully saved');
     }
 
     /**
@@ -89,9 +83,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::findOrFail($id);
+        $portfolio = Portfolio::findOrFail($id);
 
-        return view('admin.product.edit', compact('product'));
+        return view('admin.portfolio.edit', compact('portfolio'));
     }
 
     /**
@@ -105,21 +99,15 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             'name'          => 'required|string|max:30',
-            'description'   => 'max:300',
-            'price'         => 'required|integer',
-            'weight'        => 'required|integer',
+            'size'          => 'required',
         ]);
 
-        Product::whereId($id)->update([
+        Portfolio::whereId($id)->update([
             'name'          => $request->name,
-            'slug'          => strtolower($request->name),
-            'description'   => $request->description,
-            'price'         => $request->price,
-            'weight'        => $request->weight,
-            'status'        => $request->status,
+            'size'          => $request->size,
         ]);
 
-        return redirect()->route('product.index')->with('success', 'Product is successfully updated');
+        return redirect()->route('portfolio.index')->with('success', 'Portfolio is successfully updated');
     }
 
     /**
@@ -130,8 +118,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $product = Product::findOrFail($id);
-        $product->delete();
-        return redirect()->back()->with(['success' => 'Product is successfully deleted']);
+        $portfolio = Portfolio::findOrFail($id);
+        $portfolio->delete();
+        return redirect()->back()->with(['success' => 'Portfolio is successfully deleted']);
     }
 }

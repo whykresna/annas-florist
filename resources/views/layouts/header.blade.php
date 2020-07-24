@@ -8,8 +8,8 @@
                     <div class="top-header-content d-flex align-items-center justify-content-between">
                         <!-- Top Header Content -->
                         <div class="top-header-meta">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: infodeercreative@gmail.com</span></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="+62 896 8379 2377"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +62 896 8379 2377</span></a>
+                            <a href="mailto:annasfloristjember@gmail.com" data-toggle="tooltip" data-placement="bottom" title="annasfloristjember@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: annasfloristjember@gmail.com</span></a>
+                            <a href="tel:+6289683792377" data-toggle="tooltip" data-placement="bottom" title="+62 896 8379 2377"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +62 896 8379 2377</span></a>
                         </div>
 
                         <!-- Top Header Content -->
@@ -26,9 +26,9 @@
                                 </div>
                             @endguest
                             <!-- Cart -->
-                            <div class="cart">
-                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
-                            </div>
+{{--                            <div class="cart">--}}
+{{--                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href={{ url('/') }} class="nav-brand"><img src="{{ asset('img/core-img/logo.png') }}" alt=""></a>
+                    <a href={{ url('/') }} class="nav-brand"><h3 style="color: #ffffff; font-weight: bold">ANNAS<span style="color: #70c745">FLORIST</span></h3></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -63,9 +63,8 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href={{ url('/') }}>Home</a></li>
-                                <li><a href={{ url('/about') }}>About</a></li>
                                 <li><a href={{ url('/shop') }}>Shop</a></li>
-                                <li><a href={{ url('/portofolio') }}>Portfolio</a></li>
+                                <li><a href={{ url('/portfolio') }}>Portfolio</a></li>
                                 <li><a href={{ url('/blog') }}>Blog</a></li>
                                 <li><a href={{ url('/contact') }}>Contact</a></li>
                             </ul>
