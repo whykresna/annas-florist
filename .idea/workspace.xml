@@ -107,6 +107,15 @@
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/microsoft/azure-storage-common" />
+      <path value="$PROJECT_DIR$/vendor/microsoft/azure-storage-blob" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/matthewbdaly/laravel-azure-storage" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-azure-blob-storage" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ebTV230UZkKXT8aTEgIWpkSCIi" />
@@ -118,20 +127,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img/bg-img" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\annas-florist\resources\views\admin" />
-      <recent name="D:\Projects\annas-florist\public\img\core-img" />
-      <recent name="D:\Projects\annas-florist\public\img\bg-img" />
-      <recent name="D:\Projects\annas-florist\public\img\founder" />
-      <recent name="D:\Projects\annas-florist\public\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\annas-florist\app\Http\Controllers\Admin" />
       <recent name="D:\Projects\annas-florist\resources\views\layouts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\annas-florist\public\img\bg-img" />
+      <recent name="D:\Projects\annas-florist\resources\views\admin" />
+      <recent name="D:\Projects\annas-florist\public\img\core-img" />
+      <recent name="D:\Projects\annas-florist\public\img\founder" />
+      <recent name="D:\Projects\annas-florist\public\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -154,7 +163,8 @@
       <workItem from="1595076746637" duration="44194000" />
       <workItem from="1595254647372" duration="25231000" />
       <workItem from="1595447396343" duration="735000" />
-      <workItem from="1595507358428" duration="47377000" />
+      <workItem from="1595507358428" duration="50446000" />
+      <workItem from="1595749338779" duration="4369000" />
     </task>
     <servers />
   </component>

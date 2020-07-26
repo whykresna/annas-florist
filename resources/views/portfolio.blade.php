@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    @if($portfolios->count() > 0)
     <!-- ##### Portfolio Area Start ##### -->
     <section class="alazea-portfolio-area portfolio-page section-padding-0-100">
         <div class="container">
@@ -40,4 +41,5 @@
         </div>
     </section>
     <!-- ##### Portfolio Area End ##### -->
+    @endif
 @endsection

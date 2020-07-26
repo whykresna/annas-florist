@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    @if($articles->count() > 0)
     <!-- ##### Blog Area Start ##### -->
     <section class="alazea-blog-area mb-100">
         <div class="container">
@@ -125,4 +126,5 @@
         </div>
     </section>
     <!-- ##### Blog Area End ##### -->
+    @endif
 @endsection

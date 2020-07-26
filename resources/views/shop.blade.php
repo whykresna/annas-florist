@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    @if($products->count() > 0)
     <!-- ##### Shop Area Start ##### -->
     <section class="shop-page section-padding-0-100">
         <div class="container">
@@ -233,4 +234,5 @@
         </div>
     </section>
     <!-- ##### Shop Area End ##### -->
+    @endif
 @endsection

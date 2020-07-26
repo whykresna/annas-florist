@@ -17,7 +17,7 @@
                             <!-- Login -->
                             @auth
                                 <div class="login">
-                                    <a href={{ url('/admin/dashboard') }}><i aria-hidden="true"></i> <span>Dashboard</span></a>
+                                    <a href={{ url('/admin/dashboard') }}><i class="fa fa-columns" aria-hidden="true"></i> <span>Dashboard</span></a>
                                 </div>
                             @endauth
                             @guest
@@ -26,9 +26,9 @@
                                 </div>
                             @endguest
                             <!-- Cart -->
-{{--                            <div class="cart">--}}
-{{--                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>--}}
-{{--                            </div>--}}
+                            <div class="cart">
+                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>

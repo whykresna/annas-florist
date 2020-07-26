@@ -207,7 +207,7 @@
     </div>
 </section>
 <!-- ##### Service Area End ##### -->
-
+@if($products->count() > 0)
 <!-- ##### Product Area Start ##### -->
 <section class="new-arrivals-products-area bg-gray section-padding-100">
     <div class="container">
@@ -255,7 +255,8 @@
     </div>
 </section>
 <!-- ##### Product Area End ##### -->
-
+@endif
+@if($portfolios->count() > 0)
 <!-- ##### Portfolio Area Start ##### -->
 <section class="alazea-portfolio-area section-padding-100-0">
     <div class="container">
@@ -293,7 +294,7 @@
     </div>
 </section>
 <!-- ##### Portfolio Area End ##### -->
-
+@endif
 <!-- ##### Testimonial Area Start ##### -->
 <section class="testimonial-area section-padding-100">
     <div class="container">
@@ -306,7 +307,7 @@
                         <div class="row align-items-center">
                             <div class="col-12 col-md-6">
                                 <div class="testimonial-thumb">
-                                    <img src="img/bg-img/13.jpg" alt="">
+                                    <img src="{{ asset('img/bg-img/13.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
@@ -316,10 +317,10 @@
                                         <h2>TESTIMONIAL</h2>
                                         <p>Kata klien tentang Annas Florist.</p>
                                     </div>
-                                    <p>“Alazea is a pleasure to work with. Their ideas are creative, they came up with imaginative solutions to some tricky issues, their landscaping and planting contacts are equally excellent we have a beautiful but also manageable garden as a result. Thank you!”</p>
+                                    <p>“Pelayanan yang sangat ramah dan membuat customer nyaman adalah kelebihan Annas Florist. Pelayanannya sungguh sangat memuaskan. Rumah saya menjadi lebih nyaman setelah saya tambah dekorasi menggunakan produk kaktus dari Annas Florist”</p>
                                     <div class="testimonial-author-info">
-                                        <h6>Mr. Nick Jonas</h6>
-                                        <p>CEO of NAVATECH</p>
+                                        <h6>Alvisi Aura</h6>
+                                        <p>MAHASISWA</p>
                                     </div>
                                 </div>
                             </div>
@@ -331,7 +332,7 @@
                         <div class="row align-items-center">
                             <div class="col-12 col-md-6">
                                 <div class="testimonial-thumb">
-                                    <img src="img/bg-img/14.jpg" alt="">
+                                    <img src="{{ asset('img/bg-img/14.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
@@ -341,10 +342,10 @@
                                         <h2>TESTIMONIAL</h2>
                                         <p>Kata klien tentang Annas Florist</p>
                                     </div>
-                                    <p>“Alazea is a pleasure to work with. Their ideas are creative, they came up with imaginative solutions to some tricky issues, their landscaping and planting contacts are equally excellent we have a beautiful but also manageable garden as a result. Thank you!”</p>
+                                    <p>"Annas Florist merupakan perusahaan tanaman hias kaktus terbaik di jember. Dengan pengiriman yang cepat dan aman pastinya, tanaman hias favorit saya telah sampai di kota saya. Annas Florist memang tidak pernah mengecewakan"</p>
                                     <div class="testimonial-author-info">
-                                        <h6>Mr. Nazrul Islam</h6>
-                                        <p>CEO of NAVATECH</p>
+                                        <h6>Aditya Widhiantara</h6>
+                                        <p>MAHASISWA</p>
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +357,7 @@
                         <div class="row align-items-center">
                             <div class="col-12 col-md-6">
                                 <div class="testimonial-thumb">
-                                    <img src="img/bg-img/15.jpg" alt="">
+                                    <img src="{{ asset('img/bg-img/15.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
@@ -366,10 +367,10 @@
                                         <h2>TESTIMONIAL</h2>
                                         <p>Kata klien tentang Annas Florist</p>
                                     </div>
-                                    <p>“Alazea is a pleasure to work with. Their ideas are creative, they came up with imaginative solutions to some tricky issues, their landscaping and planting contacts are equally excellent we have a beautiful but also manageable garden as a result. Thank you!”</p>
+                                    <p>"Produk dan pelayanan yang diberikan oleh Annas Florist sangat memuaskan. Kantor saya telah disulap menjadi kantor yang segar dan nyaman pastinya untuk bekerja di kantor. Kalian juga harus menjadi salah satu korban kepuasan Annas Florist berikutnya."</p>
                                     <div class="testimonial-author-info">
-                                        <h6>Mr. Jonas Nick</h6>
-                                        <p>CEO of NAVATECH</p>
+                                        <h6>Kresna Rachmadika</h6>
+                                        <p>FREELANCER</p>
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +412,7 @@
     </div>
 </section>
 <!-- ##### Subscribe Area End ##### -->
-
+@if($articles->count() > 0)
 <!-- ##### Blog Area Start ##### -->
 <section class="alazea-blog-area section-padding-100-0">
     <div class="container">
@@ -450,7 +451,7 @@
     </div>
 </section>
 <!-- ##### Blog Area End ##### -->
-
+@endif
 <!-- ##### Footer Area Start ##### -->
 @include('layouts.footer')
 <!-- ##### Footer Area End ##### -->
